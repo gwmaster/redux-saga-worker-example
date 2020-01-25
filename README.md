@@ -8,6 +8,10 @@ Check out the demo:
 ![](http://g.recordit.co/hqYTQFzZZJ.gif)
 
 
+## Dependency
+
+https://www.npmjs.com/package/worker-loader
+
 
 ## Intro
 
@@ -77,5 +81,18 @@ function App() {
 }
 ```
 
+webpack.config.js
+```javascript
+    {
+      module: {
+        rules: [
+          {
+            test: /\.worker\.js$/,
+            use: { loader: 'worker-loader' }
+          }
+        ]
+      }
+    }
+```
 ## License
 MIT
