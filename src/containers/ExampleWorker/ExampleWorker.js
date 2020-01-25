@@ -23,7 +23,7 @@ function ExampleWorker (props) {
   const [isWorker , setIsWorker] = useState(false)
   const onChange = (event) => {
     let n = event.target.value;
-    if(n > 0 && n <= 14) {
+    if(n <= 14) {
       if(!disabled) setQueenN(event.target.value)
     }
   }
