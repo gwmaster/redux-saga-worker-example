@@ -94,5 +94,27 @@ webpack.config.js
       }
     }
 ```
+
+
+workerStore(config):
+
+| Param        | Description           | Required  |
+| ------------- |:-------------:| -----:|
+| saga          | saga          | required |
+| reducers      | reducers      |   required |
+| onInit        | onInit = (initParams) => {}     |   optional |   
+
+
+
+initWorkerMiddleware(config):
+
+| Param        | Description           | Required  |
+| ------------- |:-------------:| -----:|
+| saga          | saga          | required |
+| reducers      | reducers      |   required |
+| onInit        | onInit = () => {}     |  optional| 
+|initConfig | JSON | optional |
+
+
 ## License
 MIT
