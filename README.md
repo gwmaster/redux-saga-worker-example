@@ -110,8 +110,8 @@ initWorkerMiddleware(config):
 
 | Param        | Description           | Required  |
 | ------------- |:-------------:| -----:|
-| saga          | saga          | required |
-| reducers      | reducers      |   required |
+| store | main store          | required | 
+| storeWorker          | new StoreWorker()          | required |
 | onInit        | onInit = () => {}     |  optional| 
 |initConfig | JSON | optional |
 
