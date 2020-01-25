@@ -28,11 +28,20 @@ import myReducers from './reducers'
 import mySaga from './sagas'
 import {workerStore} from 'redux-saga-worker'
 const config = {
-  saga : mySaga,
-  reducers : myReducers,
+  saga : mySaga, // required
+  reducers : myReducers, // required
 }
 workerStore(config)
 ```
+
+workerStore(config):
+
+| Param        | Description           | Required  |
+| ------------- |:-------------:| -----:|
+| saga          | saga          | required |
+| reducers      | reducers      |   required |
+| onInit        | onInit = (initParams) => {}     |   optional |   
+
 
 ActionCreator: `src/containers/ExampleWorker/ExampleWorker.action.js`
 ```javascript
@@ -68,8 +77,8 @@ function App() {
   sagaMiddleware.run(mySaga)
   // then run the redux-saga-worker
   const config = {
-    store, // must
-    storeWorker : new StoreWorker(), // must
+    store, // required
+    storeWorker : new StoreWorker(), // required
   }
   initWorkerMiddleware(config)
 
@@ -80,6 +89,16 @@ function App() {
   );
 }
 ```
+
+
+initWorkerMiddleware(config):
+
+| Param        | Description           | Required  |
+| ------------- |:-------------:| -----:|
+| store | main store          | required | 
+| storeWorker          | new StoreWorker()          | required |
+| onInit        | onInit = () => {}     |  optional| 
+|initConfig | JSON | optional |
 
 webpack.config.js
 ```javascript
@@ -96,24 +115,10 @@ webpack.config.js
 ```
 
 
-workerStore(config):
-
-| Param        | Description           | Required  |
-| ------------- |:-------------:| -----:|
-| saga          | saga          | required |
-| reducers      | reducers      |   required |
-| onInit        | onInit = (initParams) => {}     |   optional |   
 
 
 
-initWorkerMiddleware(config):
 
-| Param        | Description           | Required  |
-| ------------- |:-------------:| -----:|
-| store | main store          | required | 
-| storeWorker          | new StoreWorker()          | required |
-| onInit        | onInit = () => {}     |  optional| 
-|initConfig | JSON | optional |
 
 
 ## License
