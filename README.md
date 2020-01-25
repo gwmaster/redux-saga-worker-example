@@ -40,7 +40,8 @@ workerStore(config):
 | ------------- |:-------------:| -----:|
 | saga          | saga          | required |
 | reducers      | reducers      |   required |
-| onInit        | onInit = (initParams) => {}     |   optional |   
+| onInit        | onInit = (initParams) => {}     |   optional |  
+| middleware | [] |  optional |
 
 
 ActionCreator: `src/containers/ExampleWorker/ExampleWorker.action.js`
@@ -97,7 +98,7 @@ initWorkerMiddleware(config):
 | ------------- |:-------------:| -----:|
 | store | main store          | required | 
 | storeWorker          | new StoreWorker()          | required |
-| onInit        | onInit = () => {}     |  optional| 
+| onInit        | onInit = ({workerName}) => {}     |  optional| 
 |initConfig | JSON | optional |
 
 webpack.config.js
