@@ -4,20 +4,20 @@
   "version": "0.0.1",
   "main": "src/main.js",
   "scripts": {
-    "start" : "webpack-dev-server",
+    "start": "webpack-dev-server",
     "build": "webpack --mode production"
   },
   "dependencies": {
     "@babel/polyfill": "^7.6.0",
     "babel-regenerator-runtime": "^6.5.0",
+    "fast-redux-reducer": "0.0.4",
     "prop-types": "^15.6.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-pose": "^4.0.10",
     "react-redux": "^5.0.7",
     "redux-saga": "^1.1.3",
-    "fast-redux-reducer": "0.0.4",
-    "redux-saga-worker": "0.0.2",
+    "redux-saga-worker": "0.0.7",
     "style-loader": "^1.1.3"
   },
   "devDependencies": {

@@ -42,6 +42,8 @@ workerStore(config):
 | reducers      | reducers      |   required |
 | onInit        | onInit = (initParams) => {}     |   optional |  
 | middleware | [] |  optional |
+|serialize | (data) => { return JSON.stringify(data)} | optional |
+|deserialize | (data) => {return JSON.parse(data)} | optional |
 
 
 ActionCreator: `src/containers/ExampleWorker/ExampleWorker.action.js`
@@ -100,6 +102,8 @@ initWorkerMiddleware(config):
 | storeWorker          | new StoreWorker()          | required |
 | onInit        | onInit = ({workerName}) => {}     |  optional| 
 |initConfig | JSON | optional |
+|serialize | (data) => { return JSON.stringify(data)} | optional |
+|deserialize | (data) => {return JSON.parse(data)} | optional |
 
 webpack.config.js
 ```javascript
