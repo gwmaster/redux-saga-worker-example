@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: gainsboro;
+}
+
+
+.container{
+    width: 920px;
+    background: #fffdff8c;
+    padding: 10px;
+    border-radius: 13px;
+}
+.input {
+    width : 40px;
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    height: 20px;
+    border-radius: 13px;
+    outline-width: 0;
+
+}
+/* Colored buttons styles */
+.button{
+    margin: 5px;
+}
+.button.green, .button.red, .button.blue {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.3)), to(rgba(255,255,255,0)));
+    background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+    background-image: linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+}
+
+/* */
+.header{
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.header.red{
+    background-color: #ca3535;
+}
+.header.green{
+    background-color: #62c462;
+}
+
+.button.green{
+    background-color: #57a957;
+    border-color: #57a957;
+}
+
+.button.green:hover{
+    background-color: #62c462;
+}
+
+.button.green:active{
+    background: #57a957;
+}
+
+.button.disabled{
+    background: grey !important;
+    border-color: grey !important;
+}
+/* */
+
+.button.red{
+    background-color: #ca3535;
+    border-color: #c43c35;
+}
+
+.button.red:hover{
+    background-color: #ee5f5b;
+}
+
+.button.red:active{
+    background: #c43c35;
+}
