@@ -15,9 +15,16 @@ https://www.npmjs.com/package/worker-loader
 
 ## Intro
 
-The goal of the middleware is to provide redux saga environment in Web Workers,
-Communicate in fast and easy way.
-Migrate in fast and easy way saga and reducers from main to workers.
+Enrich Redux store actions:
+The middleware enable users to perform complex tasks in the client side at real-time with high performance.
+
+If you have an application that processes big data in real-time or handle millions of events in client side, 
+then this middleware will allow the application to be easily scaled without the worry of managing web worker threads and communication.
+
+The middleware enriches the standard redux store actions by allowing the user to specify actions to be be send directly to web workers or main thread.
+By defining the "sendTo" attribute in the action, the action will perform in the main thread or new web worker.
+then, information is saved to the standard redux store and will be accessible to all of the components in the application.
+
 
 ## Demo
 A minimal example can be found as below:
@@ -54,6 +61,13 @@ const runWorker = payload => ({ type: EXAMPLE_WORKER.RUN_WORKER_SAGA, payload, s
 // execute on Main
 const runMain = payload => ({ type: EXAMPLE_WORKER.RUN_WORKER_SAGA, payload})
 ```
+
+WORKERS : {
+    ALL,
+    WORKER,
+    MAIN
+}
+
 
 Then in your store configuration,
 ```javascript
@@ -93,6 +107,7 @@ function App() {
 }
 ```
 
+new StoreWorker(workerName = WORKERS.WORKER) 
 
 initWorkerMiddleware(config):
 
